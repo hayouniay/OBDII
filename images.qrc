@@ -10,5 +10,7 @@
         <file>icons/OBD.jpeg</file>
         <file>icons/ter.png</file>
         <file>icons/TEXA-Axones-S.jpeg</file>
+        <file>icons/canva-photo-editor.png</file>
+        <file>icons/1.png</file>
     </qresource>
 </RCC>
