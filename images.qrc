@@ -1,2 +1,14 @@
-<!DOCTYPE RCC>
-<RCC version="1.0"/>
+<RCC>
+    <qresource prefix="/">
+        <file>icons/9.jpeg</file>
+        <file>icons/best.jpg</file>
+        <file>icons/diag.jpg</file>
+        <file>icons/diagintro.jpeg</file>
+        <file>icons/diagintro.jpg</file>
+        <file>icons/end.png</file>
+        <file>icons/intro.jpeg</file>
+        <file>icons/OBD.jpeg</file>
+        <file>icons/ter.png</file>
+        <file>icons/TEXA-Axones-S.jpeg</file>
+    </qresource>
+</RCC>

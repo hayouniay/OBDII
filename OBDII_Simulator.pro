@@ -17,13 +17,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    mainobd.cpp
+    mainobd.cpp \
+    quit.cpp
 
 HEADERS += \
-    mainobd.hpp
+    mainobd.hpp \
+    quit.hpp
 
 FORMS += \
-    mainobd.ui
+    mainobd.ui \
+    quit.ui
 
 TRANSLATIONS += \
     OBDII_Simulator_en_150.ts
@@ -32,3 +35,9 @@ TRANSLATIONS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    icons/icons.qrc \
+    icons/ressources.qrc \
+    icons/ressources.qrc \
+    images.qrc
