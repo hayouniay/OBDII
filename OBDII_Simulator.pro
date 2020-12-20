@@ -21,6 +21,7 @@ SOURCES += \
     quit.cpp
 
 HEADERS += \
+    log.hpp \
     mainobd.hpp \
     quit.hpp
 
