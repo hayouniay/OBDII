@@ -3,7 +3,9 @@ QT       += core gui
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
-
+QMAKE_CXXFLAGS += -O2
+#DEFINES += INTER_ELM327
+DEFINES += INTER_CAN
 # The following define makes your compiler emit warnings if you use
 # any Qt feature that has been marked deprecated (the exact warnings
 # depend on your compiler). Please consult the documentation of the
@@ -16,18 +18,25 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    fileparcer.cpp \
     main.cpp \
     mainobd.cpp \
-    quit.cpp
+    obdbase.cpp \
+    quit.cpp \
+    simulaion.cpp
 
 HEADERS += \
+    fileparcer.hpp \
     log.hpp \
     mainobd.hpp \
-    quit.hpp
+    obdbase.hpp \
+    quit.hpp \
+    simulaion.hpp
 
 FORMS += \
     mainobd.ui \
-    quit.ui
+    quit.ui \
+    simulaion.ui
 
 TRANSLATIONS += \
     OBDII_Simulator_en_150.ts
@@ -39,3 +48,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     images.qrc
+
+DISTFILES += \
+    data/config.xml \
+    data/config_js.json
