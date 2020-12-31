@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui xml
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -18,20 +18,22 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    fileparcer.cpp \
+    jsonparser.cpp \
     main.cpp \
     mainobd.cpp \
     obdbase.cpp \
     quit.cpp \
-    simulaion.cpp
+    simulaion.cpp \
+    xmlparcer.cpp
 
 HEADERS += \
-    fileparcer.hpp \
+    jsonparser.hpp \
     log.hpp \
     mainobd.hpp \
     obdbase.hpp \
     quit.hpp \
-    simulaion.hpp
+    simulaion.hpp \
+    xmlparcer.hpp
 
 FORMS += \
     mainobd.ui \
