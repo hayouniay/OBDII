@@ -19,9 +19,9 @@ void OBDBase::init()
 {
     qDebug() << "in init()";
     db = QSqlDatabase::addDatabase("QSQLITE", "Data");
-    db.setDatabaseName("/home/hayouniaymen/Documents/QT_Projects/StudentManagement/student");
+    db.setDatabaseName("/home/hayouniaymen/Documents/QT_Projects/OBDII_Smulator/OBDII");
 
-    if(QFile::exists("/home/hayouniaymen/Documents/QT_Projects/StudentManagement/student"))
+    if(QFile::exists("/home/hayouniaymen/Documents/QT_Projects/StudentManagement/OBDII_Simulator/OBDII"))
     {
         qDebug() << "DBase file exist";
     }
@@ -46,8 +46,8 @@ void OBDBase::init()
         //std::vector<int> student;
 
         QSqlDatabase Database = QSqlDatabase::addDatabase("QSQLITE", "Data");
-        Database.setDatabaseName("/home/hayouniaymen/Documents/QT_Projects/StudentManagement/student.sql");
-        if(QFile::exists("/home/hayouniaymen/Documents/QT_Projects/StudentManagement/student.sql"))
+        Database.setDatabaseName("/home/hayouniaymen/Documents/QT_Projects/OBDII_Simulator/OBDII.sql");
+        if(QFile::exists("/home/hayouniaymen/Documents/QT_Projects/OBDII_Simulator/OBDII.sql"))
             qDebug() << "DBase file exist";
         else
            qDebug() << "DBase file doesn't exists";
@@ -58,7 +58,7 @@ void OBDBase::init()
             qDebug() << "Database loaded successfull!";
 
         QSqlQuery query(Database);
-        query.prepare("select number from student where available = '" + flag + "'");
+        query.prepare("select inID from OBDII where available = '" + flag + "'");
 
         if(!query.exec())
             qDebug() << query.lastError().text() << query.lastQuery();
